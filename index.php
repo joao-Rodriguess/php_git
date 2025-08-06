@@ -15,18 +15,20 @@
                     <form method="post">
                         <div>
                             <h1>Tabuada</h1>
-                                <label><i class="bi bi-code-square"></i> Manda o numero pra mim</label>
+                                <label><i class="bi bi-1-circle-fill"></i> Manda o numero pra mim</label>
                                 <input type="number" name="number" id="number" placeholder="Digite o número" required>
                         </div>
                         <div>
-                                <label><i class="bi bi-code-square"></i> Manda o numero pra mim</label>
+                                <label><i class="bi bi-1-circle-fill"></i> Manda o numero pra mim</label>
                                 <input type="number" name="number2" id="number2" placeholder="Digite o número" required>
                         </div>
                         <div>
-                                <label><i class="bi bi-code-square"></i> Manda o tipo de operação</label>
+                                <label><i class="bi bi-braces"></i> Manda o tipo de operação</label>
                                 <input type="text" name="operacao" id="operacao" placeholder="Digite o número" required>
                         </div>
-
+                        <div>
+                            <button type="submit" class="btn btn-primary">Calcular</button>
+                        </div>
                     </form>
                 </div>
 

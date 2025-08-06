@@ -55,6 +55,14 @@ input[type="number"] {
   padding: 5px;
 }
 
+input[type="text"] {
+  color: #fff;
+  background-color: #555;
+  border: 1px solid #222;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 
 .tabela {
   width: 100%;
@@ -65,4 +73,22 @@ input[type="number"] {
   font-family: Arial, sans-serif;
   background-color: rgba(238, 236, 236, 0.8); /* fundo semi-transparente */
   align-items: center;
+}
+button[type="submit"] {
+  background-color: #c40808; /* Azul */
+  color: white; /* Texto branco */
+  border: none; /* Sem borda */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+button[type="submit"]:hover {
+  background-color: #a00606; /* Azul mais escuro ao passar o mouse */
+  color: black;
+}
+
+cursor {
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+
 }
