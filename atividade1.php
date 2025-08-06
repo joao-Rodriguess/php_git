@@ -381,7 +381,7 @@ echo "Null: " . ($g === null ? 'null' : $g) . "<br>";
 $timestamp = strtotime("last Sunday");
 echo "O timestamp do último domingo foi:".date("d/m/Y",$timestamp)."<br>";
 $timestamp = strtotime("next Sunday");
-echo "O timestamp do próximo domingo será:".date("d/m/Y",$timestamp)."<br>";
+echo "O timestamp do próximo domingo será:".date("d/m/Y H:m:s",$timestamp)."<br>";
 ?>
         </body>
 </html>
