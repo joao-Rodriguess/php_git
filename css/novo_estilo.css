@@ -1,0 +1,68 @@
+body {
+   background-image: url('https://images.alphacoders.com/133/1337439.png');         /* Caminho da imagem */
+  background-size: cover;                     /* Cobre toda a tela */
+  background-repeat: no-repeat;               /* Não repete a imagem */
+  background-position: center center;         /* Centraliza a imagem */
+  background-attachment: fixed;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.brincar {
+  background-color: #000;
+  border: 3px solid #888; /* cinza */
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  color: #fff; /* texto branco */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #fff; /* texto branco */
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.8); /* fundo semi-transparente */
+  border-radius: 10px;
+}
+
+fieldset {
+  border: none;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.brincadeira {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input[type="number"] {
+  color: #fff;
+  background-color: #222;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  color: #fff; /* texto branco */
+  font-family: Arial, sans-serif;
+  background-color: rgba(238, 236, 236, 0.8); /* fundo semi-transparente */
+  align-items: center;
+}
