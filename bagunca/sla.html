@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+
+<form>
+    <div>
+      <input type="text" id="fnome" />
+      <label for="fnome">Nome</label>
+    </div>
+    <div>
+      <input type="text" id="femail" />
+      <label for="femail">E-mail</label>
+    </div>
+    <div>
+      <input type="text" id="imagem" />
+      <label for="imagem">URL da imagem</label>
+    </div>
+    <div>
+      <input type="text" id="repositorio" />
+      <label for="repositorio">Github</label>
+    </div>
+    <div>
+      <input type="file" id="anexo" />
+    </div>
+  </form>
+
+<button onclick="salvarConteudoStorage()"> Salvar </button><br>
+
+<div>
+  <table style="border: 2px double black;">
+    <th>nome</th>
+    <th>E-mail</th>
+    <th>url</th>
+    <th>Github</th>
+    <th>Anexo</th>
+    <tbody id="corpoTabela">
+
+    </tbody>
+  </table>
+</div>
+
+
+<script>
+    const tBody = document.getElementById('corpoTabela');
+
+function salvarConteudoStorage() {
+  let arraycadastro = [];
+
+  if (localStorage.getItem('dados') != null) {
+    arraycadastro = JSON.parse(localStorage.getItem('dados'));
+  } else {
+    arraycadastro;
+  }
+
+  var nome = document.getElementById("fnome").value;
+  var email = document.getElementById("femail").value;
+  var imagem = document.getElementById("imagem").value;
+  var repositorio = document.getElementById("repositorio").value;
+  var anexo = document.getElementById("anexo").value;
+
+
+  var info = {
+    nome,
+    email,
+    imagem,
+    repositorio,
+    anexo
+  };
+
+  arraycadastro.push(info);
+  var infoJson = JSON.stringify(arraycadastro);
+  localStorage.setItem("dados", infoJson);
+
+  buscarConteudo();
+}
+
+
+function buscarConteudo() {
+  const arr = JSON.parse(localStorage.getItem('dados'));
+
+  if (arr != null) {
+    let tr = '';
+    arr.map(conteudo => {
+      tr += `
+			<tr>
+					<td>${conteudo.nome}</td>
+					<td>${conteudo.email}</td>
+					<td>${conteudo.imagem}</td>
+					<td>${conteudo.repositorio}</td>
+					<td>${conteudo.anexo}</td>
+
+				</tr>`
+
+
+    })
+    tBody.innerHTML = tr;
+  }
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../uploads/funcao.js"></script>
+</body>
+</html>

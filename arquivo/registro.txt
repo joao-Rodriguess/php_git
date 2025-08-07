@@ -1,0 +1,36 @@
+Joao pedro|12|human.11.jumanji@gmail.com|17992035037|rua francisco molina|Valinhos|PR|Rússia
+Parafal|19|human.11.jumanji@gmail.com|1232142423|rua alfredo rodrigues simoes|votuporanga|SP|Brasil
+Nahyron|12|human.11.jumanji@gmail.com|1232142423|rua alfredo rodrigues simoes|votuporanga|AC|Brasil
+Ian|10|human.11.jumanji@gmail.com|1232142423|rua alfredo rodrigues simoes|votuporanga|SP|Brasil
+Pietra|16|human.11.jumanji@gmail.com|1232142423|rua alfredo rodrigues simoes|votuporanga|AC|Brasil
+Leticia|40|human.11.jumanji@gmail.com|12333444|rua aaaa|Mato grosso|MG|Brasil
+Maria Silva|34|maria.silva@email.com|11987654321|av. paulista|São Paulo|SP|Brasil
+Carlos Souza|28|carlos.souza@email.com|21987654322|rua das flores|Rio de Janeiro|RJ|Brasil
+Ana Paula|22|ana.paula@email.com|31987654323|rua central|Belo Horizonte|MG|Brasil
+Lucas Martins|31|lucas.martins@email.com|41987654324|av. das nações|Curitiba|PR|Brasil
+Fernanda Lima|27|fernanda.lima@email.com|51987654325|rua do sol|Porto Alegre|RS|Brasil
+Rafael Alves|36|rafael.alves@email.com|61987654326|rua verde|Brasília|DF|Brasil
+Juliana Rocha|25|juliana.rocha@email.com|71987654327|av. oceano|Salvador|BA|Brasil
+Bruno Costa|29|bruno.costa@email.com|81987654328|rua azul|Recife|PE|Brasil
+Patrícia Gomes|33|patricia.gomes@email.com|91987654329|av. das rosas|Fortaleza|CE|Brasil
+André Pereira|40|andre.pereira@email.com|11987654330|rua do lago|Campinas|SP|Brasil
+Camila Torres|21|camila.torres@email.com|21987654331|av. liberdade|Niterói|RJ|Brasil
+Gustavo Freitas|38|gustavo.freitas@email.com|31987654332|rua do campo|Uberlândia|MG|Brasil
+Larissa Ribeiro|26|larissa.ribeiro@email.com|41987654333|av. das árvores|Londrina|PR|Brasil
+Felipe Mendes|32|felipe.mendes@email.com|51987654334|rua do vento|Caxias do Sul|RS|Brasil
+Bianca Oliveira|24|bianca.oliveira@email.com|61987654335|av. do mar|Goiânia|GO|Brasil
+Vinicius Barros|35|vinicius.barros@email.com|71987654336|rua do bosque|João Pessoa|PB|Brasil
+Natália Cunha|30|natalia.cunha@email.com|81987654337|av. das pedras|Maceió|AL|Brasil
+Thiago Fernandes|37|thiago.fernandes@email.com|91987654338|rua do porto|Belém|PA|Brasil
+Aline Castro|23|aline.castro@email.com|11987654339|av. do farol|Santos|SP|Brasil
+Rodrigo Nunes|39|rodrigo.nunes@email.com|21987654340|rua do parque|Duque de Caxias|RJ|Brasil
+Jéssica Morais|20|jessica.morais@email.com|31987654341|av. do museu|Contagem|MG|Brasil
+Eduardo Teixeira|41|eduardo.teixeira@email.com|41987654342|rua do mercado|Maringá|PR|Brasil
+Sabrina Almeida|28|sabrina.almeida@email.com|51987654343|av. do teatro|Pelotas|RS|Brasil
+Fábio Reis|34|fabio.reis@email.com|61987654344|rua do cinema|Anápolis|GO|Brasil
+Tatiane Lopes|27|tatiane.lopes@email.com|71987654345|av. do estádio|Campina Grande|PB|Brasil
+Marcelo Dias|36|marcelo.dias@email.com|81987654346|rua do aeroporto|Aracaju|SE|Brasil
+Vanessa Mello|29|vanessa.mello@email.com|91987654347|av. do shopping|Natal|RN|Brasil
+Henrique Campos|32|henrique.campos@email.com|11987654348|rua do hospital|Sorocaba|SP|Brasil
+Isabela Neves|25|isabela.neves@email.com|21987654349|av. do zoológico|Nova Iguaçu|RJ|Brasil
+
