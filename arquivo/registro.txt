@@ -33,4 +33,6 @@ Marcelo Dias|36|marcelo.dias@email.com|81987654346|rua do aeroporto|Aracaju|SE|B
 Vanessa Mello|29|vanessa.mello@email.com|91987654347|av. do shopping|Natal|RN|Brasil
 Henrique Campos|32|henrique.campos@email.com|11987654348|rua do hospital|Sorocaba|SP|Brasil
 Isabela Neves|25|isabela.neves@email.com|21987654349|av. do zoológico|Nova Iguaçu|RJ|Brasil
-
+Kaua|123|human.11.jumanji@gmail.com|17992035037|rua alfredo rodrigues simoes|votuporanga|AC|Brasil
+Kaua|123|human.11.jumanji@gmail.com|17992035037|rua alfredo rodrigues simoes|votuporanga|AC|Brasilvitor|32|human.11.jumanji@gmail.com|17992035037|rua alfredo rodrigues simoes|Valinhos|PR|Peru
+Joao pedro|232|human.11.jumanji@gmail.com|17992035037|rua aaaa|votuporanga|AC|Brasil

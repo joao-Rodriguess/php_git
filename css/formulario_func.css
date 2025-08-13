@@ -1,0 +1,128 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #747274;
+}
+
+form{
+    margin-top: 20px;
+    border: 5px solid #270722;
+    background-color: #FBF9FF;
+    border-radius: 15px;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    width: 35%;
+}
+
+label{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.form-group{
+    padding: 10px;
+    border: #270722 solid 2px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: #FBF9FF;
+    color: #B5AA9D;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.form-group input{
+    background-color: #FBF9FF;
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+    border: 0 white solid;
+    box-shadow:  0 0 5px #000000;
+}
+
+.submit{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.submit input{
+    background-color: #270722;
+    color: #FBF9FF;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0 white solid;
+    box-shadow: 0 0 5px #000000;
+}
+
+.submit input:hover{
+    background-color: #FBF9FF;
+    color: #270722;
+    cursor: pointer;
+}
+
+.titulo{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+        .table-responsive {
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+        .box2 table {
+            width: 100%;
+            min-width: 900px;
+            border-collapse: collapse;
+        }
+        .box2 th, .box2 td {
+            border: 1px solid #ddd;
+            padding: 12px 16px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .box2 th {
+            background-color: #f2f2f2;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .table-light tfoot tr td {
+            background-color: #f8f9fa;
+            border-top: 2px solid #dee2e6;
+            font-size: 15px;
+            color: #555;
+            padding: 12px 0;
+        }
+        .table-light tfoot a.link-primary {
+            color: #0d6efd;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .table-light tfoot a.link-primary:hover {
+            color: #084298;
+            text-decoration: none;
+        }
