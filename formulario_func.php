@@ -107,12 +107,12 @@
             </thead>
             <tbody>
                <?php
-            $arquivo = "arquivo/registro.txt";
+            $arquivo = "arquivo/funcionarios.txt";
             if (file_exists($arquivo)) {
                 $linhas = file($arquivo);
                 foreach ($linhas as $linha) {
                     $dados = explode("|", trim($linha));
-                    list($nome, $idade, $email, $telefone, $endereco, $cidade, $estado, $pais) = $dados;
+                    list($nome, $idade, $email, $telefone, $salario_hora, $horas_trabalho) = $dados;
                     echo "<tr>
                             <td>$nome</td>
                             <td>$idade</td>
