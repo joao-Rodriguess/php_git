@@ -22,6 +22,10 @@ form{
     width: 35%;
 }
 
+form:hover{
+    box-shadow: 0 0 10px #000000;
+}
+
 label{
     font-weight: bold;
     font-size: 20px;
@@ -30,7 +34,7 @@ label{
 
 .form-group{
     padding: 10px;
-    border: #270722 solid 2px;
+    border: #270722 solid 3px;
     border-radius: 15px;
     margin-bottom: 10px;
     background-color: #FBF9FF;
@@ -46,6 +50,10 @@ label{
     width: 100%;
     border: 0 white solid;
     box-shadow:  0 0 5px #000000;
+}
+
+.form-group input[type="file"]{
+    background-color: #270722;
 }
 
 .submit{
@@ -74,55 +82,84 @@ label{
 .titulo{
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-        .table-responsive {
-            max-width: 1200px;
-            margin: 30px auto;
+/* ...existing code... */
+
+/* Adiciona scroll vertical no tbody da tabela de funcionários */
+.box2 .table-responsive {
+    max-height: 350px;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Mantém o cabeçalho fixo ao rolar */
+.box2 table {
+    width: 75%;
+    min-width: 900px;
+    border-collapse: collapse;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin-left: 250px;
+
+}
+
+.box2 thead, .box2 tfoot {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.box2 thead tr {
+    background-color: #363636;
+    color: #f2f2f2;
+}
+
+.box2 tbody {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.box2 thead, .box2 tfoot, .box2 tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.box2 th, .box2 td {
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #f2f2f2;
+}
+
+.box2 th {
+    background-color: #363636;
+    color: #f2f2f2;
+    font-family: monospace;
+     max-height: 350px;
+}
+
+.box2 tr:hover {
+    background-color: #646464;
+}
+
+/* ...existing code... */
+      
+
+        .box2 img {
+            width: 500px;
+            height: 500px;
+            height: auto;
+            border-radius: 20%;
         }
-        .box2 table {
-            width: 100%;
-            min-width: 900px;
-            border-collapse: collapse;
-        }
-        .box2 th, .box2 td {
-            border: 1px solid #ddd;
-            padding: 12px 16px;
-            text-align: center;
-            font-size: 16px;
-        }
-        .box2 th {
-            background-color: #f2f2f2;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #777;
-        }
-        .footer p {
-            margin: 0;
-        }
-        .footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .table-light tfoot tr td {
-            background-color: #f8f9fa;
-            border-top: 2px solid #dee2e6;
-            font-size: 15px;
-            color: #555;
-            padding: 12px 0;
-        }
-        .table-light tfoot a.link-primary {
-            color: #0d6efd;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        .table-light tfoot a.link-primary:hover {
-            color: #084298;
-            text-decoration: none;
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
