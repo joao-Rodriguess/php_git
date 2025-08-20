@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Funcionários Cadastrados</title>
     <link href="css/formulario_func.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <form method="post" class="search-form">
+        <input 
+            type="text" 
+            class="search-input" 
+            name="search" 
+            placeholder="Pesquisar por nome..." 
+            value="<?php echo isset($_POST['search']) ? htmlspecialchars($_POST['search']) : ''; ?>"
+        >
+<button type="submit" class="search-btn" style="display: flex; flex-direction:row; margin-left:30px;">
+       <span>Buscar <i class='bi bi-search'></i></span>
+</button>
+
+    </form>
+
     <div class="box2 table-responsive">
-         <h2 class="titulo"> Tabela mostrando os registros de Funcionários Cadastrados</h2>
+        <h2 class="titulo">Tabela mostrando os registros de Funcionários Cadastrados</h2>
         <table class="table table-hover table-striped">
             <thead>
                 <tr>
@@ -21,57 +37,50 @@
                 </tr>
             </thead>
             <tbody>
-               <?php
+            <?php
             $arquivo = "arquivo/funcionarios.txt";
+            $search = isset($_POST['search']) ? trim($_POST['search']) : '';
+            $mostrou = false;
             if (file_exists($arquivo)) {
                 $linhas = file($arquivo);
                 foreach ($linhas as $linha) {
                     $dados = explode("|", trim($linha));
+                    if (count($dados) < 6) continue; // ignora linhas incompletas
                     list($nome, $idade, $email, $telefone, $salario_hora, $horas_trabalho) = $dados;
+
+                    // Filtra pelo nome se houver pesquisa
+                    if ($search && stripos($nome, $search) === false) {
+                        continue;
+                    }
+                    $mostrou = true;
                     echo "<tr>
-                            <td>$nome</td>
-                            <td>$idade</td>
-                            <td>$email</td>
-                            <td>$telefone</td>
-                            <td>$salario_hora</td>
-                            <td>$horas_trabalho</td>
+                            <td>" . htmlspecialchars($nome) . "</td>
+                            <td>" . htmlspecialchars($idade) . "</td>
+                            <td>" . htmlspecialchars($email) . "</td>
+                            <td>" . htmlspecialchars($telefone) . "</td>
+                            <td>" . htmlspecialchars($salario_hora) . "</td>
+                            <td>" . htmlspecialchars($horas_trabalho) . "</td>
                           </tr>";
                 }
+                if (!$mostrou) {
+                    echo "<tr><td colspan='6'>Nenhum funcionário encontrado.</td></tr>";
+                }
             } else {
-                echo "<tr><td colspan='8'>Nenhum dado registrado.</td></tr>";
+                echo "<tr><td colspan='6'>Nenhum dado registrado.</td></tr>";
             }
             ?>
-
             </tbody>
-            <tfoot class="footer ">
+            <tfoot class="footer">
                 <tr>
-                    <td colspan="8" >
-                        <a href="formulario_func.php" >Voltar para o formulário</a>
+                    <td colspan="6">
+                        <a href="formulario_func.php">Voltar para o formulário</a>
                     </td>
                 </tr>
             </tfoot>
         </table>
     </div>
 
-    <div class="box2">
-        <h2 class="titulo">Imagens dos Funcionários</h2>
-        <div class="row">
-            <?php
-            $pasta_imagens = "img/";
-            if (is_dir($pasta_imagens)) {
-                $imagens = glob($pasta_imagens . "*.{jpg,jpeg,png,gif}", GLOB_BRACE);
-                foreach ($imagens as $imagem) {
-                    echo "<div class='col-md-3'>
-                            <img src='$imagem' alt='Imagem do Funcionário' class='img-fluid'>
-                          </div>";
-                }
-            } else {
-                echo "<p>Nenhuma imagem encontrada.</p>";
-            }
-            ?>
-        </div>
+   
+    </div>
 </body>
 </html>
-
-
-       
