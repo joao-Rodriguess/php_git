@@ -17,6 +17,14 @@
             placeholder="Pesquisar por nome..." 
             value="<?php echo isset($_POST['search']) ? htmlspecialchars($_POST['search']) : ''; ?>"
         >
+
+        <input 
+            type="number" 
+            class="search-input" 
+            name="salary_search" 
+            placeholder="Pesquisar por salário..." 
+            value="<?php echo isset($_POST['salary_search']) ? htmlspecialchars($_POST['salary_search']) : ''; ?>"
+        >
 <button type="submit" class="search-btn" style="display: flex; flex-direction:row; margin-left:30px;">
        <span>Buscar <i class='bi bi-search'></i></span>
 </button>
@@ -40,6 +48,7 @@
             <?php
             $arquivo = "arquivo/funcionarios.txt";
             $search = isset($_POST['search']) ? trim($_POST['search']) : '';
+             $salary_search = isset($_POST['salary_search']) ? trim($_POST['salary_search']) : '';
             $mostrou = false;
             if (file_exists($arquivo)) {
                 $linhas = file($arquivo);
@@ -49,9 +58,14 @@
                     list($nome, $idade, $email, $telefone, $salario_hora, $horas_trabalho) = $dados;
 
                     // Filtra pelo nome se houver pesquisa
-                    if ($search && stripos($nome, $search) === false) {
-                        continue;
-                    }
+                    if (
+    $search &&
+    stripos($nome, $search) === false &&
+    stripos($email, $search) === false &&
+    stripos($salario_hora, $salary_search) === false 
+) {
+    continue;
+}
                     $mostrou = true;
                     echo "<tr>
                             <td>" . htmlspecialchars($nome) . "</td>
