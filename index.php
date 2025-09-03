@@ -8,6 +8,37 @@
     <title>J.P</title>
 </head>
 <body>
+    <script>
+var number1 = 4;
+var number2 = 2;
+var number3 = 5;
+var number4 = 7;
+
+const media= (number1 + number2 +number3 +number4)/4;
+
+console.log(media);
+
+
+var x = 3;
+var y = 9;
+
+const conta = ((10*x)+(30 * x * y))-((y/y)-(2*x));
+console.log(conta);
+
+var porcentagem = conta*0.3
+console.log(porcentagem);
+
+const a = 5
+const b = 4;
+const c = -10;
+const delta = b * b - 4 * a * c;
+const x1 = (-b +Math.sqrt(delta))/(2 * a);
+const x2 = (-b -Math.sqrt(delta))/(2 * a);
+
+document.write(x1, x2);
+
+
+    </script>
     <div class="brincar">
        
             <fieldset>FORMULARIO</fieldset>

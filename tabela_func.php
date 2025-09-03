@@ -9,14 +9,22 @@
     <link href="css/formulario_func.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <form method="post" class="search-form">
+    <form method="post" class="group-form" style="display:flex; flex-direction:row;">
         <input 
             type="text" 
             class="search-input" 
             name="search" 
             placeholder="Pesquisar por nome..." 
             value="<?php echo isset($_POST['search']) ? htmlspecialchars($_POST['search']) : ''; ?>"
-        >
+        >ㅤ
+
+        <input 
+            type="text" 
+            class="search-input" 
+            name="email_search" 
+            placeholder="Pesquisar por email..." 
+            value="<?php echo isset($_POST['email_search']) ? htmlspecialchars($_POST['email_search']) : ''; ?>"
+        >ㅤ
 
         <input 
             type="number" 
@@ -24,8 +32,8 @@
             name="salary_search" 
             placeholder="Pesquisar por salário..." 
             value="<?php echo isset($_POST['salary_search']) ? htmlspecialchars($_POST['salary_search']) : ''; ?>"
-        >
-<button type="submit" class="search-btn" style="display: flex; flex-direction:row; margin-left:30px;">
+        >ㅤ
+<button type="submit" class="search-btn">
        <span>Buscar <i class='bi bi-search'></i></span>
 </button>
 
@@ -48,7 +56,7 @@
             <?php
             $arquivo = "arquivo/funcionarios.txt";
             $search = isset($_POST['search']) ? trim($_POST['search']) : '';
-             $salary_search = isset($_POST['salary_search']) ? trim($_POST['salary_search']) : '';
+            $salary_search = isset($_POST['salary_search']) ? trim($_POST['salary_search']) : '';
             $mostrou = false;
             if (file_exists($arquivo)) {
                 $linhas = file($arquivo);
@@ -57,11 +65,13 @@
                     if (count($dados) < 6) continue; // ignora linhas incompletas
                     list($nome, $idade, $email, $telefone, $salario_hora, $horas_trabalho) = $dados;
 
+
+
                     // Filtra pelo nome se houver pesquisa
                     if (
     $search &&
     stripos($nome, $search) === false &&
-    stripos($email, $search) === false &&
+    stripos($email, $email_search) === false &&
     stripos($salario_hora, $salary_search) === false 
 ) {
     continue;
