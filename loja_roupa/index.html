@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="_css/style.css">
+</head>
+<body>
+    <!-- formulario de cadastro de roupas -->
+    <form action="_bd/cadastrar_roupa.php" method="post" enctype="multipart/form-data">
+        <!-- Dados do produto -->
+        <fieldset class="form-section">
+            <legend>Informações do Produto</legend>
+            <div class="form-group">
+                <label for="nome"><i class="bi bi-person-vcard"></i> Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br>
+            </div>
+            <div class="form-group">
+                <label for="cor"><i class="bi bi-paint-bucket"></i> Cor:</label><br>
+                <input type="text" id="cor" name="cor" required><br>
+            </div>
+        </fieldset>
+
+        <!-- Camisetas -->
+        <fieldset class="form-section">
+            <legend>Camiseta</legend>
+            <div class="form-group">
+                <label for="descricao"><i class="bi bi-card-text"></i> Tipo:</label><br>
+                <select id="descricao" name="descricao" required onchange="mostrarSubtipo()">
+                    <option value="">Selecione o tipo</option>
+                    <option value="Camiseta Oversized">Camiseta Oversized</option>
+                    <option value="Camiseta Tie-Dye">Camiseta Tie-Dye</option>
+                    <option value="Camiseta Streetwear">Camiseta Streetwear</option>
+                    <option value="Camiseta Geek">Camiseta Geek</option>
+                    <option value="Camiseta Cropped">Camiseta Cropped</option>
+                    <option value="Camiseta Vintage">Camiseta Vintage</option>
+                    <option value="Camiseta Minimalista">Camiseta Minimalista</option>
+                </select>
+                <br>
+                <select id="subtipo" name="subtipo" style="display:none;" required>
+                    <option value="">Selecione o subtipo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tamanho"><i class="bi bi-tag"></i> Tamanho:</label><br>
+                <select id="tamanho" name="tamanho" required>
+                    <option value="PP">PP</option>
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="precoCamiseta"><i class="bi bi-cash-coin"></i> Preço Camiseta:</label><br>
+                <input type="number" min="0" step="0.01" id="precoCamiseta" name="precoCamiseta" value="0" required><br>
+            </div>
+        </fieldset>
+
+        <!-- Calças -->
+        <fieldset class="form-section">
+            <legend>Calça</legend>
+            <div class="form-group">
+                <label for="descricaoCalca"><i class="bi bi-card-text"></i> Tipo:</label><br>
+                <select id="descricaoCalca" name="descricaoCalca" required onchange="mostrarSubtipoCalca()">
+                    <option value="">Selecione o tipo</option>
+                    <option value="Calça Jeans">Calça Jeans</option>
+                    <option value="Calça Jogger">Calça Jogger</option>
+                    <option value="Calça Cargo">Calça Cargo</option>
+                    <option value="Calça Moletom">Calça Moletom</option>
+                    <option value="Calça Skinny">Calça Skinny</option>
+                    <option value="Calça Wide Leg">Calça Wide Leg</option>
+                    <option value="Calça Sarja">Calça Sarja</option>
+                </select>
+                <br>
+                <select id="subtipoCalca" name="subtipoCalca" style="display:none;" required>
+                    <option value="">Selecione o subtipo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tamanhoCalca"><i class="bi bi-tag"></i> Tamanho:</label><br>
+                <select id="tamanhoCalca" name="tamanhoCalca" required>
+                    <option value="36">36</option>
+                    <option value="38">38</option>
+                    <option value="40">40</option>
+                    <option value="42">42</option>
+                    <option value="44">44</option>
+                    <option value="46">46</option>
+                    <option value="48">48</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="precoCalca"><i class="bi bi-cash-coin"></i> Preço Calça:</label><br>
+                <input type="number" min="0" step="0.01" id="precoCalca" name="precoCalca" value="0" required><br>
+            </div>
+        </fieldset>
+
+        <!-- Calçados -->
+        <fieldset class="form-section">
+            <legend>Calçado</legend>
+            <div class="form-group">
+                <label for="descricaoCalcado"><i class="bi bi-card-text"></i> Tipo:</label><br>
+                <select id="descricaoCalcado" name="descricaoCalcado" required onchange="mostrarSubtipoCalcado()">
+                    <option value="">Selecione o tipo</option>
+                    <option value="Tênis">Tênis</option>
+                    <option value="Bota">Bota</option>
+                    <option value="Sandália">Sandália</option>
+                    <option value="Chinelo">Chinelo</option>
+                    <option value="Sapatênis">Sapatênis</option>
+                    <option value="Coturno">Coturno</option>
+                </select>
+                <br>
+                <select id="subtipoCalcado" name="subtipoCalcado" style="display:none;" required>
+                    <option value="">Selecione o subtipo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tamanhoCalcado"><i class="bi bi-tag"></i> Tamanho:</label><br>
+                <select id="tamanhoCalcado" name="tamanhoCalcado" required>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="precoCalcado"><i class="bi bi-cash-coin"></i> Preço Calçado:</label><br>
+                <input type="number" min="0" step="0.01" id="precoCalcado" name="precoCalcado" value="0" required><br>
+            </div>
+        </fieldset>
+
+        <!-- Shorts -->
+        <fieldset class="form-section">
+            <legend>Short</legend>
+            <div class="form-group">
+                <label for="descricaoShort"><i class="bi bi-card-text"></i> Tipo:</label><br>
+                <select id="descricaoShort" name="descricaoShort" required onchange="mostrarSubtipoShort()">
+                    <option value="">Selecione o tipo</option>
+                    <option value="Short Jeans">Short Jeans</option>
+                    <option value="Short Moletom">Short Moletom</option>
+                    <option value="Short Esportivo">Short Esportivo</option>
+                    <option value="Short Cargo">Short Cargo</option>
+                    <option value="Short Praia">Short Praia</option>
+                    <option value="Short Cintura Alta">Short Cintura Alta</option>
+                </select>
+                <br>
+                <select id="subtipoShort" name="subtipoShort" style="display:none;" required>
+                    <option value="">Selecione o subtipo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tamanhoShort"><i class="bi bi-tag"></i> Tamanho:</label><br>
+                <select id="tamanhoShort" name="tamanhoShort" required>
+                    <option value="36">36</option>
+                    <option value="38">38</option>
+                    <option value="40">40</option>
+                    <option value="42">42</option>
+                    <option value="44">44</option>
+                    <option value="46">46</option>
+                    <option value="48">48</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="precoShort"><i class="bi bi-cash-coin"></i> Preço Short:</label><br>
+                <input type="number" min="0" step="0.01" id="precoShort" name="precoShort" value="0" required><br>
+            </div>
+        </fieldset>
+
+        <!-- Preço total -->
+        <fieldset class="form-section">
+            <legend>Resumo do Pedido</legend>
+            <div class="form-group">
+                <label for="precoTotal"><i class="bi bi-cash-stack"></i> Preço Total:</label><br>
+                <input type="text" id="precoTotal" name="precoTotal" readonly style="background:#e3eafc; font-weight:700;">
+            </div>
+        </fieldset>
+
+        <script>
+// IDs dos campos de preço individuais
+const camposPreco = [
+    "precoCamiseta",
+    "precoCalca",
+    "precoCalcado",
+    "precoShort"
+];
+
+// Adicione inputs de preço para cada peça
+function criarCamposPreco() {
+    const form = document.querySelector('form');
+    const refs = [
+        {id: "precoCamiseta", label: "Preço Camiseta"},
+        {id: "precoCalca", label: "Preço Calça"},
+        {id: "precoCalcado", label: "Preço Calçado"},
+        {id: "precoShort", label: "Preço Short"}
+    ];
+    refs.forEach(ref => {
+        const div = document.createElement('div');
+        div.className = "form-group";
+        div.innerHTML = `<label for="${ref.id}"><i class="bi bi-cash-coin"></i> ${ref.label}:</label><br>
+            <input type="number" min="0" step="0.01" id="${ref.id}" name="${ref.id}" value="0" required><br>`;
+        // Insere antes do campo cor
+        const corDiv = document.getElementById('cor').parentNode;
+        
+    });
+}
+criarCamposPreco();
+
+// Função para somar os preços
+function atualizarPrecoTotal() {
+    let total = 0;
+    camposPreco.forEach(id => {
+        const campo = document.getElementById(id);
+        if (campo && campo.value) {
+            total += parseFloat(campo.value) || 0;
+        }
+    });
+    document.getElementById('precoTotal').value = "R$ " + total.toFixed(2).replace('.', ',');
+}
+
+// Adiciona evento para cada campo de preço
+camposPreco.forEach(id => {
+    document.addEventListener('input', function(e) {
+        if (e.target.id === id) {
+            atualizarPrecoTotal();
+        }
+    });
+});
+
+// Inicializa o valor total
+atualizarPrecoTotal();
+</script>
+
+        <!-- Imagem -->
+        <fieldset class="form-section">
+            <legend>Imagem do Produto</legend>
+            <div class="form-group">
+                <label for="arquivo"><i class="bi bi-ui-checks-grid"></i> Envie uma imagem do produto:</label><br>
+                <input type="file" id="arquivo" name="arquivo" required><br><br>
+            </div>
+        </fieldset>
+
+        <div class="submit">
+            <input type="submit" value="Cadastrar">
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="_js/custom.js"></script>
+</body>
+</html>

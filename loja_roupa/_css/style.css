@@ -1,0 +1,168 @@
+/* Paleta: frias (azul, verde, lilás) + neutros (cinza, branco) */
+
+body {
+    background: linear-gradient(120deg, #e3eafc 0%, #f5f7fa 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 32px 36px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(44, 62, 80, 0.10);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 7px;
+    font-size: 1.07rem;
+}
+
+
+input[type="number"][id^="preco"] {
+    width: 120px;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 7px 10px;
+    margin-bottom: 4px;
+}
+
+input[type="text"][id^="precoTotal"] {
+    width: 500px;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 7px 10px;
+    margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="number"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #b2bec3;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #f7fafd;
+    margin-bottom: 4px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #5f7fff;
+    box-shadow: 0 0 0 2px #dbeafe;
+    outline: none;
+}
+
+select {
+    cursor: pointer;
+    background: #f7fafd;
+}
+
+input[type="file"] {
+    background: #fff;
+    border: none;
+    padding: 0;
+}
+
+.submit {
+    text-align: center;
+    margin-top: 32px;
+}
+
+input[type="submit"] {
+    background: linear-gradient(90deg, #5f7fff 0%, #6dd5ed 100%);
+    color: #fff;
+    border: none;
+    padding: 13px 44px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 1.13rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #4e6ce6 0%, #53b6e8 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+select[style*="display:none"] {
+    margin-top: 0;
+}
+
+.form-group label i {
+    color: #5f7fff;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+@media (max-width: 800px) {
+    form {
+        max-width: 98vw;
+        padding: 18px 4vw;
+    }
+    .form-group label {
+        font-size: 1rem;
+    }
+    input, select {
+        font-size: 0.98rem;
+    }
+}
+
+/* Intuitivo: destaque visual para selects dependentes */
+select:disabled,
+select[style*="display:none"] {
+    background: #f0f4f8;
+    color: #b2bec3;
+}
+
+/* Espaçamento entre grupos */
+.form-group:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* Estilo para selects dependentes quando visíveis */
+select:required:valid {
+    border-color: #6dd5ed;
+}
+
+/* Estilo para botões de arquivo */
+input[type="file"]::-webkit-file-upload-button {
+    background: #5f7fff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    background: #5f7fff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
